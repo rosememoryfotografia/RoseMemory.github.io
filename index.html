@@ -1,1 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diseñador Gráfico</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #111;
+      color: white;
+    }
+
+    /* MENÚ */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0,0,0,0.5);
+      z-index: 100;
+    }
+
+    header h1 {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: white;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* HERO */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+      url('portada-1.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      padding: 0 60px;
+    }
+
+    .hero-content {
+      max-width: 600px;
+    }
+
+    .hero-content h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      line-height: 1.5;
+    }
+
+    .hero-content button {
+      background: #8b0000;
+      border: none;
+      padding: 12px 20px;
+      color: white;
+      margin-right: 10px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .hero-content button:hover {
+      background: #b00000;
+    }
+
+    /* SECCIONES */
+    section {
+      padding: 80px 60px;
+      background: #111;
+    }
+
+    section h3 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 15px;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Rose Memory</h1>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#galeria">Galería</a>
+    <a href="#acerca">Acerca de</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<!-- INICIO -->
+<div class="hero" id="inicio">
+  <div class="hero-content">
+    <h2>Diseñador<br>Gráfico</h2>
+    <p>
+      Es momento de crear todo lo que imaginas
+      y volverlo realidad con diseño profesional.
+    </p>
+    <button>Crear cuenta</button>
+    <button>Iniciar sesión</button>
+  </div>
+</div>
+
+<!-- GALERÍA -->
+<section id="galeria">
+  <h3>Galería</h3>
+  <div class="grid">
+    <div class="card">
+      <img src="portada-1.jpg" alt="Inicio">
+      <p>Inicio</p>
+    </div>
+    <div class="card">
+      <img src="fotografia.jpg" alt="Fotografía">
+      <p>Fotografía</p>
+    </div>
+    <div class="card">
+      <img src="dibujos.jpg" alt="Ilustraciones">
+      <p>Ilustraciones</p>
+    </div>
+  </div>
+</section>
+
+<!-- ACERCA -->
+<section id="acerca">
+  <h3>Acerca de</h3>
+  <p>
+    Soy diseñador gráfico enfocado en crear
+    experiencias visuales impactantes, marcas
+    sólidas y contenido creativo.
+  </p>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <h3>Contacto</h3>
+  <p>Email: rosememoryfotografia@gmail.com</p>
+  <p>Instagram: <a href="https://www.instagram.com/rose_memory_grafico/" target="_blank">@rose_memory_grafico</a></p>
+</section>
+
+</body>
+</html>
 
