@@ -16,7 +16,7 @@
 }
 
 @font-face {
-  font-family: 'MYRIADPRO-BOLD';
+  font-family: 'MyriadProBold';
   src: url('myriadpro-bold.woff') format('woff');
 }
 
@@ -37,6 +37,49 @@
 body {
   background: #111;
   color: white;
+  font-family: 'MyriadProBold';
+}
+
+/* =====================
+   CONTENEDOR
+===================== */
+.page-wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+/* =====================
+   HEADER / MENÚ
+===================== */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 1920px;
+  padding: 20px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
+  z-index: 100;
+}
+
+header h1 {
+  font-family: 'Mogilte';
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
 
 /* =====================
@@ -58,35 +101,21 @@ body {
 }
 
 /* =====================
-   MARCA (ARRIBA DERECHA)
-===================== */
-.marca {
-  position: absolute;
-  top: 30px;
-  right: 80px;
-  font-family: 'Mogilte';
-  font-size: 26px;
-  letter-spacing: 1px;
-}
-
-/* =====================
-   CONTENIDO IZQUIERDO
+   TEXTO IZQUIERDO
 ===================== */
 .hero-left {
   max-width: 480px;
 }
 
-/* Bienvenido */
 .bienvenido {
   font-family: 'BohemianSoul';
-  font-size: 32px;
+  font-size: 36px;
   margin-bottom: 20px;
 }
 
-/* Texto descriptivo */
 .descripcion {
-  font-family: 'MYRIADPRO-BOLD';
-  font-size: 18px;
+  font-family: 'MyriadProBold';
+  font-size: 20px;
   line-height: 1.5;
 }
 
@@ -98,10 +127,48 @@ body {
   left: 50%;
   transform: translateX(-10%);
   font-family: 'MyriadProBold';
-  font-size: 96px;
-  letter-spacing: -0.05em; /* tracking -50 */
+  font-size: 110px;
+  letter-spacing: -0.05em;
   line-height: 0.95;
-  text-align: left;
+}
+
+/* =====================
+   SECCIONES
+===================== */
+section {
+  padding: 100px 80px;
+}
+
+section h3 {
+  font-family: 'MyriadProBold';
+  font-size: 36px;
+  margin-bottom: 25px;
+}
+
+section p {
+  max-width: 700px;
+  line-height: 1.7;
+}
+
+/* =====================
+   GALERÍA
+===================== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 18px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 12px;
 }
 
 </style>
@@ -109,12 +176,21 @@ body {
 
 <body>
 
-<section class="hero">
+<div class="page-wrapper">
 
-  <!-- Marca -->
-  <div class="marca">Rose Memory</div>
+<header>
+  <h1>Rose Memory</h1>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#galeria">Galería</a>
+    <a href="#acerca">Acerca de</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
 
-  <!-- Texto izquierdo -->
+<!-- HERO -->
+<section class="hero" id="inicio">
+
   <div class="hero-left">
     <div class="bienvenido">¡Bienvenido!</div>
     <p class="descripcion">
@@ -124,7 +200,6 @@ body {
     </p>
   </div>
 
-  <!-- Título principal -->
   <div class="hero-title">
     Diseñador<br>
     Gráfico
@@ -132,5 +207,41 @@ body {
 
 </section>
 
+<!-- GALERÍA -->
+<section id="galeria">
+  <h3>Galería</h3>
+  <div class="grid">
+    <div class="card">
+      <img src="diseños.jpg" alt="Diseño">
+      <p>Diseño</p>
+    </div>
+    <div class="card">
+      <img src="fotografia.jpg" alt="Fotografía">
+      <p>Fotografía</p>
+    </div>
+    <div class="card">
+      <img src="dibujos.jpg" alt="Ilustración">
+      <p>Ilustración</p>
+    </div>
+  </div>
+</section>
+
+<!-- ACERCA -->
+<section id="acerca">
+  <h3>Acerca de</h3>
+  <p>
+    Soy diseñador gráfico enfocado en crear
+    experiencias visuales impactantes, marcas
+    sólidas y contenido creativo.
+  </p>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <h3>Contacto</h3>
+  <p>Email: rosememoryfotografia@gmail.com</p>
+</section>
+
+</div>
 </body>
 </html>
