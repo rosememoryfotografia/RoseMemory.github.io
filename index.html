@@ -16,7 +16,7 @@
 }
 
 @font-face {
-  font-family: 'MyriadPro-Bold';
+  font-family: 'MyriadProBold';
   src: url('myriadpro-bold.woff') format('woff');
 }
 
@@ -25,11 +25,11 @@
   src: url('mogilte.woff') format('woff');
 }
 
- @font-face {
+@font-face {
   font-family: 'Gilgan';
   src: url('Gilgan.woff') format('woff');
 }
-   
+
 /* =====================
    RESET
 ===================== */
@@ -39,10 +39,13 @@
   box-sizing: border-box;
 }
 
+/* =====================
+   ESTILO BASE (GILGAN)
+===================== */
 body {
   background: #111;
   color: white;
-  font-family: 'MyriadProBold';
+  font-family: 'Gilgan', sans-serif;
 }
 
 /* =====================
@@ -81,6 +84,7 @@ nav a {
   text-decoration: none;
   color: white;
   font-size: 14px;
+  font-family: 'Gilgan';
 }
 
 nav a:hover {
@@ -131,7 +135,7 @@ nav a:hover {
   position: absolute;
   left: 62%;
   transform: translateX(0);
-  font-family: 'MyriadPro-Bold';
+  font-family: 'MyriadProBold';
   font-size: 110px;
   letter-spacing: -0.05em;
   line-height: 0.95;
@@ -145,7 +149,7 @@ section {
 }
 
 section h3 {
-  font-family: 'MyriadPro-Bold';
+  font-family: 'MyriadProBold';
   font-size: 36px;
   margin-bottom: 25px;
 }
@@ -153,6 +157,7 @@ section h3 {
 section p {
   max-width: 700px;
   line-height: 1.7;
+  font-family: 'Gilgan';
 }
 
 /* =====================
@@ -174,6 +179,10 @@ section p {
   width: 100%;
   border-radius: 12px;
   margin-bottom: 12px;
+}
+
+.card p {
+  font-family: 'Gilgan';
 }
 
 </style>
@@ -198,11 +207,11 @@ section p {
 
   <div class="hero-left">
     <div class="bienvenido">¡Bienvenido!</div>
-  <p class="descripcion">
-  Es momento de crear<br>
-  todo lo que te imaginas y<br>
-  se vuelva realidad.
-</p>
+    <p class="descripcion">
+      Es momento de crear<br>
+      todo lo que te imaginas y<br>
+      se vuelva realidad.
+    </p>
   </div>
 
   <div class="hero-title">
@@ -241,6 +250,7 @@ section p {
   </p>
 </section>
 
+<!-- CONTACTO -->
 <section id="contacto">
   <h3>Contacto</h3>
   <p>Email: rosememoryfotografia@gmail.com</p>
