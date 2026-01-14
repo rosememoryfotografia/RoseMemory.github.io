@@ -144,4 +144,128 @@ nav a:hover {
    SECCIONES
 ===================== */
 section {
-  padding: 100px 80
+  padding: 100px 80px;
+}
+
+section h3 {
+  font-family: 'mogilte';
+  font-size: 36px;
+  margin-bottom: 25px;
+}
+
+section p {
+  max-width: 700px;
+  line-height: 1.7;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+/* =====================
+   GALERÍA
+===================== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 18px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.card p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="page-wrapper">
+
+<header>
+  <h1>Rose Memory</h1>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#galeria">Galería</a>
+    <a href="#acerca">Acerca de</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+
+  <div class="hero-left">
+    <div class="bienvenido">¡Bienvenido!</div>
+    <p class="descripcion">
+      Es momento de crear<br>
+      todo lo que te imaginas y<br>
+      se vuelva realidad.
+    </p>
+  </div>
+
+  <div class="hero-title">
+    Diseñador<br>
+    Gráfico
+  </div>
+
+</section>
+
+<!-- GALERÍA -->
+<section id="galeria">
+  <h3>Galería</h3>
+  <div class="grid">
+    <div class="card">
+      <img src="diseños.jpg" alt="Diseño">
+      <p>Diseño</p>
+    </div>
+    <div class="card">
+      <img src="fotografia.jpg" alt="Fotografía">
+      <p>Fotografía</p>
+    </div>
+    <div class="card">
+      <img src="dibujos.jpg" alt="Ilustración">
+      <p>Ilustración</p>
+    </div>
+  </div>
+</section>
+
+<!-- ACERCA -->
+<section id="acerca">
+  <h3>Acerca de</h3>
+  <p>
+    Soy diseñador gráfico enfocado en crear
+    experiencias visuales impactantes, marcas
+    sólidas y contenido creativo.
+  </p>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <h3>Contacto</h3>
+  <p>Email: rosememoryfotografia@gmail.com</p>
+  <p>
+    Instagram:
+    <a href="https://www.instagram.com/rose_memory_grafico/"
+       target="_blank"
+       rel="noopener noreferrer"
+       style="color:white;">
+      @rose_memory_grafico
+    </a>
+  </p>
+</section>
+
+</div>
+</body>
+</html>
