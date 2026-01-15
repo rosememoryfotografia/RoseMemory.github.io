@@ -18,12 +18,25 @@
 @font-face {
   font-family: 'bohemian-soul';
   src: url('bohemian-soul.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
   font-family: 'mogilte';
   src: url('mogilte.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
+
+@font-face {
+  font-family: 'nexas';
+  src: url('nexa.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 /* =====================
    RESET
@@ -35,7 +48,7 @@
 }
 
 /* =====================
-   ESTILO BASE (POPPINS)
+   ESTILO BASE
 ===================== */
 body {
   background: #111;
@@ -81,7 +94,6 @@ nav a {
   color: white;
   font-size: 14px;
   font-family: 'Poppins', sans-serif;
-  font-weight: 500;
 }
 
 nav a:hover {
@@ -116,31 +128,35 @@ nav a:hover {
 
 .bienvenido {
   font-family: 'bohemian-soul';
-  font-size: 96px;
-  margin-bottom: 20px;
+  font-size: 110px;
+  margin-bottom: 30px;
+  position: absolute;
+  top: 335px
 }
+
 
 .descripcion {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
   font-size: 36px;
   line-height: 1.5;
+   position: absolute;
+  top: 460px;
+  left: 120px;
 }
-
+ 
 /* =====================
    TITULO PRINCIPAL
 ===================== */
 .hero-title {
   position: absolute;
-  right: 80px;
-  top: 120px;  
-  font-family: 'mogilte';
-  font-size: 110px;
-  letter-spacing: -0.05em;
+  right: 165px;
+  top: 380px;
+  font-family: 'nexa';
+  font-size: 140px;
+  letter-spacing: -0.04em;
   line-height: 0.95;
-  text-align: right;
+  text-align: left;
 }
-   
+
 /* =====================
    SECCIONES
 ===================== */
@@ -157,8 +173,6 @@ section h3 {
 section p {
   max-width: 700px;
   line-height: 1.7;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
 }
 
 /* =====================
@@ -182,11 +196,6 @@ section p {
   margin-bottom: 12px;
 }
 
-.card p {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-}
-
 </style>
 </head>
 
@@ -204,9 +213,7 @@ section p {
   </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero" id="inicio">
-
   <div class="hero-left">
     <div class="bienvenido">¡Bienvenido!</div>
     <p class="descripcion">
@@ -220,39 +227,43 @@ section p {
     Diseñador<br>
     Gráfico
   </div>
-
 </section>
 
-<!-- GALERÍA -->
 <section id="galeria">
   <h3>Galería</h3>
   <div class="grid">
     <div class="card">
-      <img src="diseños.jpg" alt="Diseño">
-      <p>Diseño</p>
+      <img src="Fondo1.jpg" alt="Ediciòn">
+      <p>Edición</p>
     </div>
     <div class="card">
       <img src="fotografia.jpg" alt="Fotografía">
       <p>Fotografía</p>
     </div>
     <div class="card">
-      <img src="dibujos.jpg" alt="Ilustración">
-      <p>Ilustración</p>
+      <img src="Ilustraciones.jpg" alt="Ilustraciones">
+      <p>Ilustraciónes</p>
     </div>
   </div>
 </section>
 
-<!-- ACERCA -->
 <section id="acerca">
   <h3>Acerca de</h3>
   <p>
-    Soy diseñador gráfico enfocado en crear
-    experiencias visuales impactantes, marcas
-    sólidas y contenido creativo.
+   Soy diseñador gráfico enfocado en crear experiencias visuales impactantes y marcas sólidas que comuniquen con claridad 
+   y personalidad.Me caracterizo por tener una visión creativa, atención al detalle y un compromiso constante con la calidad 
+   en cada proyecto que realizo. 
+   Además del diseño, disfruto el dibujo y la ilustración como parte fundamental de mi proceso creativo, lo que me permite
+   desarrollar propuestas originales y auténticas.
+   Trabajo en distintos campos como la pintura, la edición de imágenes y la fotografía, así como en la creación de ediciones visuales 
+   para publicidad en redes sociales, integrando cada disciplina para lograr resultados visuales completos y bien estructurados.
+
+   Cuento con experiencia en el diseño de material impreso y digital, incluyendo tarjetas de presentación, piezas promocionales y todo 
+   tipo de recursos gráficos para impulsar marcas, negocios o proyectos personales.Mi objetivo es siempre entregar resultados funcionales, 
+   estéticos y de alto impacto, adaptados a las necesidades de cada cliente.
   </p>
 </section>
 
-<!-- CONTACTO -->
 <section id="contacto">
   <h3>Contacto</h3>
   <p>Email: rosememoryfotografia@gmail.com</p>
