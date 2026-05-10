@@ -41,6 +41,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* =====================
    ESTILO BASE
 ===================== */
@@ -64,8 +68,8 @@ body {
 header {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-  max-width: 1920px;
   padding: 20px 80px;
   display: flex;
   justify-content: space-between;
@@ -109,13 +113,13 @@ nav a:hover {
 
 .bienvenido {
   font-family: 'bohemian-soul';
-  font-size: 110px;
+  font-size: clamp(64px, 10vw, 110px);
   position: absolute;
   top: 335px;
 }
 
 .descripcion {
-  font-size: 36px;
+  font-size: clamp(20px, 3vw, 36px);
   line-height: 1.5;
   position: absolute;
   top: 460px;
@@ -127,7 +131,7 @@ nav a:hover {
   right: 165px;
   top: 380px;
   font-family: 'nexa';
-  font-size: 140px;
+  font-size: clamp(48px, 12vw, 140px);
   line-height: 0.95;
 }
 
@@ -162,12 +166,39 @@ section p {
   background: #1a1a1a;
   padding: 20px;
   border-radius: 18px;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0,0,0,.4);
 }
 
 .card img {
   width: 100%;
+  height: 300px;
+  object-fit: cover;
   border-radius: 12px;
   margin-bottom: 12px;
+}
+
+/* =====================
+   ACERCA DE
+===================== */
+#acerca p {
+  text-align: justify;
+  line-height: 1.9;
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  background: #0d0d0d;
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
 }
 
 /* =====================
@@ -204,11 +235,15 @@ section p {
     position: static;
     font-size: 20px;
     margin-bottom: 30px;
+    left: auto;
+    top: auto;
   }
 
   .hero-title {
     position: static;
     font-size: 72px;
+    right: auto;
+    top: auto;
   }
 
   section {
@@ -247,6 +282,7 @@ section p {
 
 <section class="hero" id="inicio">
   <div class="bienvenido">¡Bienvenido!</div>
+
   <p class="descripcion">
     Es momento de crear<br>
     todo lo que te imaginas y<br>
@@ -260,38 +296,46 @@ section p {
 
 <section id="galeria">
   <h3>Galería</h3>
+
   <div class="grid">
+
     <div class="card">
-      <img src="Creaciones.jpg">
+      <img src="Creaciones.jpg" alt="Diseño de comunicación visual">
       <p>Comunicacion visual</p>
     </div>
+
     <div class="card">
-      <img src="fotografia.jpg">
+      <img src="fotografia.jpg" alt="Fotografía profesional">
       <p>Fotografía</p>
     </div>
+
     <div class="card">
-      <img src="Ilustraciones.jpg">
+      <img src="Ilustraciones.jpg" alt="Creación multiformato">
       <p>Creacion multiformato</p>
     </div>
+
   </div>
 </section>
 
 <section id="acerca">
   <h3>Acerca de</h3>
+
   <p>
     Soy diseñador gráfico, enfocado en crear soluciones visuales claras, atractivas y funcionales. Mi trabajo se basa en transformar ideas en piezas gráficas que comuniquen de manera efectiva y generen impacto visual, siempre cuidando la estética, el orden y la identidad de cada proyecto.
 
-Realizo flyers publicitarios, rotulaciones, tarjetas de presentación y todo tipo de material gráfico e impreso, adaptado a las necesidades de cada cliente o marca. Me caracterizo por tener una buena presentación profesional, atención al detalle y un enfoque responsable en cada entrega.
+    Realizo flyers publicitarios, rotulaciones, tarjetas de presentación y todo tipo de material gráfico e impreso, adaptado a las necesidades de cada cliente o marca. Me caracterizo por tener una buena presentación profesional, atención al detalle y un enfoque responsable en cada entrega.
 
-Además del diseño digital, cuento con experiencia en ilustración, edición de imágenes, fotografía y trabajos creativos en distintos formatos, lo que me permite ofrecer soluciones completas tanto para impresión como para medios digitales y redes sociales.
+    Además del diseño digital, cuento con experiencia en ilustración, edición de imágenes, fotografía y trabajos creativos en distintos formatos, lo que me permite ofrecer soluciones completas tanto para impresión como para medios digitales y redes sociales.
 
-Mi objetivo es que cada diseño no solo se vea bien, sino que comunique, represente y funcione, logrando resultados visuales sólidos y de calidad.
+    Mi objetivo es que cada diseño no solo se vea bien, sino que comunique, represente y funcione, logrando resultados visuales sólidos y de calidad.
   </p>
 </section>
 
 <section id="contacto">
   <h3>Contacto</h3>
+
   <p>Email: rosememoryfotografia@gmail.com</p>
+
   <p>
     Instagram:
     <a href="https://www.instagram.com/rose_memory_grafico/" target="_blank" style="color:white;">
@@ -299,6 +343,10 @@ Mi objetivo es que cada diseño no solo se vea bien, sino que comunique, represe
     </a>
   </p>
 </section>
+
+<footer>
+  <p>© 2026 Rose Memory - Todos los derechos reservados</p>
+</footer>
 
 </div>
 </body>
