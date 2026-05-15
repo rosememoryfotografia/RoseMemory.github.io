@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Fotografía | Rose Memory</title>
+
+<link rel="icon" type="image/png" href="logo.png">
+
+<link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+
+<style>
+
+/* =====================
+   FUENTES LOCALES
+===================== */
+@font-face {
+  font-family: 'bohemian-soul';
+  src: url('fonts/bohemian-soul.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'nexa';
+  src: url('fonts/nexa.woff2') format('woff2');
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#111;
+  color:white;
+  font-family:sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
+  z-index: 100;
+}
+
+header h1{
+  font-size:32px;
+  font-family:'bohemian-soul';
+}
+.boton-header{
+  font-family:'nexa';
+  color:white;
+  text-decoration:none;
+  border:1px solid rgba(255,255,255,.4);
+  padding:10px 22px;
+  border-radius:12px;
+  transition:.3s ease;
+  font-size:14px;
+}
+
+.boton-header:hover{
+  background:white;
+  color:black;
+}
+
+.galeria{
+  padding:140px 80px 80px;
+}
+
+.galeria h2{
+  font-size:56px;
+  margin-bottom:70px;
+  font-family:'nexa';
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:25px;
+  align-items:start;
+}
+
+.grid img{
+  width:100%;
+  height:420px;
+  object-fit:cover;
+  object-position:center;
+  border-radius:18px;
+ transition: transform .4s ease;
+}
+
+.grid img:hover{
+  transform:scale(1.05);
+}
+
+.boton{
+  display:inline-block;
+  margin-top:50px;
+  color:white;
+  text-decoration:none;
+  border:1px solid white;
+  padding:14px 28px;
+  border-radius:12px;
+  transition:.3s ease;
+}
+
+.boton:hover{
+  background:white;
+  color:black;
+}
+
+@media(max-width:768px){
+
+  header{
+    padding:20px;
+  }
+
+  .galeria{
+    padding:40px 20px;
+  }
+
+  .grid img{
+    height:300px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Rose Memory</h1>
+  <a href="index.html" class="boton-header">
+    Volver
+  </a>
+</header>
+
+<section class="galeria">
+
+  <h2>Fotografía</h2>
+
+ <div class="grid">
+
+ <a href="img/fotografia/foto1.jpg" class="glightbox">
+  <img src="img/fotografia/foto1.jpg" alt="" loading="lazy">
+</a>
+
+<a href="img/fotografia/foto2.jpg" class="glightbox">
+  <img src="img/fotografia/foto2.jpg" alt="" loading="lazy">
+</a>
+
+<a href="img/fotografia/foto3.jpg" class="glightbox">
+  <img src="img/fotografia/foto3.jpg" alt="" loading="lazy">
+</a>
+
+<a href="img/fotografia/foto4.jpg" class="glightbox">
+  <img src="img/fotografia/foto4.jpg" alt="" loading="lazy">
+</a>
+
+<a href="img/fotografia/foto5.jpg" class="glightbox">
+  <img src="img/fotografia/foto5.jpg" alt="" loading="lazy">
+</a>
+
+<a href="img/fotografia/foto6.jpg" class="glightbox">
+  <img src="img/fotografia/foto6.jpg" alt="" loading="lazy">
+</a>
+
+<a href="img/fotografia/foto7.jpg" class="glightbox">
+  <img src="img/fotografia/foto7.jpg" alt="" loading="lazy">
+</a>
+
+<a href="img/fotografia/foto8.jpg" class="glightbox">
+  <img src="img/fotografia/foto8.jpg" alt="" loading="lazy">
+</a>
+
+<a href="img/fotografia/foto9.jpg" class="glightbox">
+  <img src="img/fotografia/foto9.jpg" alt="" loading="lazy">
+</a>
+
+<a href="img/fotografia/foto10.jpg" class="glightbox">
+  <img src="img/fotografia/foto10.jpg" alt="" loading="lazy">
+</a>
+
+<a href="img/fotografia/foto11.jpg" class="glightbox">
+  <img src="img/fotografia/foto11.jpg" alt="" loading="lazy">
+</a>
+
+<a href="img/fotografia/foto12.jpg" class="glightbox">
+  <img src="img/fotografia/foto12.jpg" alt="" loading="lazy">
+</a>
+
+<a href="img/fotografia/foto13.png" class="glightbox">
+  <img src="img/fotografia/foto13.png" alt="" loading="lazy">
+</a>
+
+<a href="img/fotografia/foto14.png" class="glightbox">
+  <img src="img/fotografia/foto14.png" alt="" loading="lazy">
+</a>
+
+<a href="img/fotografia/foto15.jpg" class="glightbox">
+  <img src="img/fotografia/foto15.jpg" alt="" loading="lazy">
+</a>
+
+<a href="img/fotografia/foto16.jpg" class="glightbox">
+  <img src="img/fotografia/foto16.jpg" alt="" loading="lazy">
+</a>
+
+<a href="img/fotografia/foto17.jpg" class="glightbox">
+  <img src="img/fotografia/foto17.jpg" alt="" loading="lazy">
+</a>
+
+</div>
+  
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+<script>
+  const lightbox = GLightbox({
+    touchNavigation: true,
+    loop: true
+  });
+</script>
+
+
+</body>
+</html>
