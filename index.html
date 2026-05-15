@@ -151,6 +151,32 @@ header.scrolled {
   line-height: 0.95;
 }
 
+/* BOTON PDF */
+
+.boton-pdf{
+  position:absolute;
+  left: 230px;
+  top:670px;
+
+  background:white;
+  color:black;
+
+  text-decoration:none;
+  padding:14px 26px;
+
+  border-radius:14px;
+
+  font-family: 'Poppins', sans-serif;
+  font-size:14px;
+
+  transition:.3s ease;
+}
+
+.boton-pdf:hover{
+  transform:translateY(-4px);
+  background:#d9d9d9;
+}
+
 /* =====================
    SECCIONES
 ===================== */
@@ -198,6 +224,11 @@ section p {
   object-fit: cover;
   border-radius: 12px;
   margin-bottom: 12px;
+  transition: transform .5s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
 }
 
 .card-overlay {
@@ -370,6 +401,10 @@ footer {
     Diseñador<br>Gráfico
   </div>
 
+   <a href="portafolio.pdf" download class="boton-pdf">
+    Descargar Portafolio
+  </a>
+
 </section>
 
 <section id="galeria" data-aos="fade-up">
@@ -380,7 +415,7 @@ footer {
 
     <div class="card">
 
-      <a href="Creaciones.jpg" class="glightbox">
+      <a href="comunicacion.html">
 
         <img src="Creaciones.jpg" alt="Diseño de comunicación visual">
 
@@ -396,7 +431,7 @@ footer {
 
     <div class="card">
 
-      <a href="fotografia.jpg" class="glightbox">
+      <a href="fotografia.html">
 
         <img src="fotografia.jpg" alt="Fotografía profesional">
 
@@ -410,21 +445,19 @@ footer {
 
     </div>
 
-    <div class="card">
+  <div class="card">
 
-      <a href="Ilustraciones.jpg" class="glightbox">
+  <a href="multiformato.html">
 
-        <img src="Ilustraciones.jpg" alt="Creación multiformato">
+    <img src="Ilustraciones.jpg" alt="Creación multiformato">
 
-        <div class="card-overlay">
-          <span>Ver proyecto</span>
-        </div>
-
-      </a>
-
-      <p>Creacion multiformato</p>
-
+    <div class="card-overlay">
+      <span>Ver proyecto</span>
     </div>
+
+  </a>
+
+  <p>Creación multiformato</p>
 
   </div>
 
