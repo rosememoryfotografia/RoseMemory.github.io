@@ -129,6 +129,99 @@ main{
 
 }
 
+/* =====================
+   MEJORAS MÓVIL - MULTIFORMATO
+===================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.masonry a {
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+/* TABLET Y TELÉFONO */
+@media(max-width:768px){
+
+  header {
+    padding: 14px 18px;
+  }
+
+  header h1 {
+    font-size: 25px;
+  }
+
+  .boton {
+    padding: 9px 18px;
+    font-size: 12px;
+    border-radius: 10px;
+  }
+
+  main {
+    padding: 115px 18px 60px;
+  }
+
+  .titulo {
+    font-size: clamp(36px, 11vw, 52px);
+    line-height: 1;
+    margin-bottom: 32px;
+  }
+
+ .masonry{
+  columns:3 260px;
+  column-gap:18px;
+}
+
+  .masonry a {
+    margin-bottom: 18px;
+  }
+
+  .masonry img {
+    height: 320px;
+    border-radius: 18px;
+  }
+
+  .masonry img:hover {
+    transform: none;
+  }
+}
+
+/* TELÉFONOS PEQUEÑOS */
+@media(max-width:480px){
+
+  header {
+    padding: 12px 16px;
+  }
+
+  header h1 {
+    font-size: 23px;
+  }
+
+  main {
+    padding: 105px 16px 50px;
+  }
+
+  .titulo {
+    font-size: 38px;
+    margin-bottom: 26px;
+  }
+
+  .masonry img {
+    height: 280px;
+  }
+}
+
 </style>
 </head>
 
