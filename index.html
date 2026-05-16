@@ -3,12 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Rose Memory | Diseñador Gráfico</title>
+
 <link rel="icon" type="image/png" href="logo.png">
 
 <!-- GOOGLE FONTS -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 
 <!-- FONT AWESOME -->
@@ -17,22 +20,22 @@
 <!-- AOS -->
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-<!-- LIGHTBOX -->
-<link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
-
 <style>
 
 /* =====================
    FUENTES LOCALES
 ===================== */
+
 @font-face {
   font-family: 'bohemian-soul';
   src: url('bohemian-soul.woff') format('woff');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'mogilte';
   src: url('mogilte.woff') format('woff');
+  font-display: swap;
 }
 
 @font-face {
@@ -45,6 +48,7 @@
 /* =====================
    RESET
 ===================== */
+
 * {
   margin: 0;
   padding: 0;
@@ -53,20 +57,29 @@
 
 html {
   scroll-behavior: smooth;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
-/* =====================
-   ESTILO BASE
-===================== */
 body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
   background: #111;
-  color: rgb(255, 255, 255);
+  color: white;
   font-family: 'Poppins', sans-serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 /* =====================
    CONTENEDOR
 ===================== */
+
 .page-wrapper {
   max-width: 1920px;
   margin: 0 auto;
@@ -75,6 +88,7 @@ body {
 /* =====================
    HEADER
 ===================== */
+
 header {
   position: fixed;
   top: 0;
@@ -87,6 +101,12 @@ header {
   background: rgba(0,0,0,0.6);
   backdrop-filter: blur(6px);
   z-index: 100;
+  transition: all .3s ease;
+}
+
+header.scrolled {
+  background: rgba(0,0,0,0.92);
+  padding: 15px 80px;
 }
 
 header h1 {
@@ -105,22 +125,17 @@ nav a:hover {
   text-decoration: underline;
 }
 
-header.scrolled {
-  background: rgba(0,0,0,0.92);
-  padding: 15px 80px;
-  transition: all .3s ease;
-}
-
 /* =====================
    HERO
 ===================== */
+
 .hero {
   height: 100vh;
   background:
     linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
     url('portada.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: 58% center;
   display: flex;
   align-items: center;
   padding: 120px 80px 0;
@@ -144,42 +159,40 @@ header.scrolled {
 
 .hero-title {
   position: absolute;
-  right: 165px;
-  top: 380px;
+  right: 175px;
+  top: 360px;
   font-family: 'nexa';
-  font-size: clamp(48px, 12vw, 140px);
+  font-size: clamp(48px, 12vw, 120px);
   line-height: 0.95;
 }
 
-/* BOTON PDF */
+/* =====================
+   BOTÓN PDF
+===================== */
 
-.boton-pdf{
-  position:absolute;
+.boton-pdf {
+  position: absolute;
   left: 230px;
-  top:670px;
-
-  background:white;
-  color:black;
-
-  text-decoration:none;
-  padding:14px 26px;
-
-  border-radius:14px;
-
+  top: 670px;
+  background: white;
+  color: black;
+  text-decoration: none;
+  padding: 14px 26px;
+  border-radius: 14px;
   font-family: 'Poppins', sans-serif;
-  font-size:14px;
-
-  transition:.3s ease;
+  font-size: 14px;
+  transition: .3s ease;
 }
 
-.boton-pdf:hover{
-  transform:translateY(-4px);
-  background:#d9d9d9;
+.boton-pdf:hover {
+  transform: translateY(-4px);
+  background: #d9d9d9;
 }
 
 /* =====================
    SECCIONES
 ===================== */
+
 section {
   padding: 100px 80px;
 }
@@ -198,6 +211,7 @@ section p {
 /* =====================
    GALERÍA
 ===================== */
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -256,6 +270,7 @@ section p {
 /* =====================
    ACERCA DE
 ===================== */
+
 .acerca-texto {
   max-width: 1000px;
 }
@@ -271,6 +286,7 @@ section p {
 /* =====================
    FOOTER
 ===================== */
+
 footer {
   text-align: center;
   padding: 30px 20px;
@@ -282,6 +298,7 @@ footer {
 /* =====================
    WHATSAPP
 ===================== */
+
 .whatsapp-btn {
   position: fixed;
   right: 25px;
@@ -308,85 +325,20 @@ footer {
 /* =====================
    RESPONSIVE TELÉFONOS
 ===================== */
+
 @media (max-width: 768px) {
 
   header {
-    padding: 15px 20px;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  nav a {
-    margin: 10px 0;
-    font-size: 13px;
-  }
-
-  .hero {
-    padding: 100px 20px 40px;
-    height: auto;
-    min-height: 100vh;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .bienvenido {
-    position: static;
-    font-size: 64px;
-    margin-bottom: 20px;
-  }
-
-  .descripcion {
-    position: static;
-    font-size: 20px;
-    margin-bottom: 30px;
-    left: auto;
-    top: auto;
-  }
-
-  .hero-title {
-    position: static;
-    font-size: 72px;
-    right: auto;
-    top: auto;
-  }
-
-  section {
-    padding: 80px 20px;
-  }
-
-  section h3 {
-    font-size: 28px;
-  }
-
-  section p {
-    font-size: 15px;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-  }
-}
-/* =====================
-   MEJORAS MÓVIL PREMIUM
-===================== */
-
-body {
-  overflow-x: hidden;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-/* TELÉFONOS */
-@media (max-width: 768px) {
-
-  header {
+    width: 100%;
+    max-width: 100%;
     padding: 14px 18px;
     flex-direction: column;
     align-items: center;
     gap: 12px;
+  }
+
+  header.scrolled {
+    padding: 10px 18px;
   }
 
   header h1 {
@@ -398,6 +350,7 @@ img {
     flex-wrap: wrap;
     justify-content: center;
     gap: 8px 14px;
+    max-width: 100%;
   }
 
   nav a {
@@ -406,46 +359,61 @@ img {
     padding: 6px 8px;
   }
 
-  header.scrolled {
-    padding: 10px 18px;
-  }
-
   .hero {
+    width: 100%;
+    height: auto;
     min-height: 100svh;
-    padding: 150px 22px 60px;
-    background-position: center top;
+    padding: 150px 20px 60px;
+    background-size: cover;
+    background-position: center center;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
     gap: 18px;
+    overflow: hidden;
+  }
+
+  .bienvenido,
+  .descripcion,
+  .hero-title,
+  .boton-pdf {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
   }
 
   .bienvenido {
-    font-size: clamp(54px, 18vw, 76px);
-    line-height: 0.95;
+    font-size: clamp(48px, 17vw, 70px);
+    line-height: 1;
     margin-bottom: 5px;
+    word-break: normal;
   }
 
   .descripcion {
-    font-size: 18px;
-    line-height: 1.6;
+    font-size: clamp(16px, 5vw, 20px);
+    line-height: 1.5;
     margin-bottom: 8px;
   }
 
   .hero-title {
-    font-size: clamp(58px, 20vw, 86px);
-    line-height: 0.9;
+    font-size: clamp(52px, 18vw, 78px);
+    line-height: .9;
     margin-bottom: 20px;
+    word-break: normal;
   }
 
   .boton-pdf {
-    position: static;
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    width: auto;
+    max-width: 100%;
     min-height: 48px;
+    margin-top: 20px;
     padding: 14px 22px;
     font-size: 13px;
     border-radius: 14px;
-    width: fit-content;
   }
 
   section {
@@ -551,7 +519,7 @@ img {
     Diseñador<br>Gráfico
   </div>
 
-   <a href="portafolio.pdf" download class="boton-pdf">
+  <a href="portafolio.pdf" download class="boton-pdf">
     Descargar Portafolio
   </a>
 
@@ -575,7 +543,7 @@ img {
 
       </a>
 
-      <p>Comunicacion visual</p>
+      <p>Comunicación visual</p>
 
     </div>
 
@@ -595,19 +563,21 @@ img {
 
     </div>
 
-  <div class="card">
+    <div class="card">
 
-  <a href="multiformato.html">
+      <a href="multiformato.html">
 
-    <img src="Ilustraciones.jpg" alt="Creación multiformato" loading="lazy">
+        <img src="Ilustraciones.jpg" alt="Creación multiformato" loading="lazy">
 
-    <div class="card-overlay">
-      <span>Ver proyecto</span>
+        <div class="card-overlay">
+          <span>Ver proyecto</span>
+        </div>
+
+      </a>
+
+      <p>Creación multiformato</p>
+
     </div>
-
-  </a>
-
-  <p>Creación multiformato</p>
 
   </div>
 
@@ -643,16 +613,16 @@ img {
 
   <h3>Contacto</h3>
 
-<p>
-  Email:
-  <a href="mailto:rosememoryfotografia@gmail.com" style="color:white;">
-    rosememoryfotografia@gmail.com
-  </a>
-</p>
+  <p>
+    Email:
+    <a href="mailto:rosememoryfotografia@gmail.com" style="color:white;">
+      rosememoryfotografia@gmail.com
+    </a>
+  </p>
 
   <p>
     Instagram:
-    <a href="https://www.instagram.com/rosemermory/" target="_blank" style="color:white;">
+    <a href="https://www.instagram.com/rose_memory_grafico/" target="_blank" rel="noopener noreferrer" style="color:white;">
       @rose_memory_grafico
     </a>
   </p>
@@ -667,9 +637,10 @@ img {
 
 <!-- WHATSAPP -->
 <a 
-  href="https://wa.me/5632505551" 
+  href="https://wa.me/525632505551" 
   class="whatsapp-btn"
   target="_blank"
+  rel="noopener noreferrer"
 >
   <i class="fa-brands fa-whatsapp"></i>
 </a>
@@ -677,28 +648,22 @@ img {
 <!-- SCRIPTS -->
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-
 <script>
   AOS.init({
     duration: 1000,
     once: true
   });
 
-  const lightbox = GLightbox({
-    touchNavigation: true,
-    loop: true
-  });
-
   window.addEventListener('scroll', () => {
-  const header = document.querySelector('header');
+    const header = document.querySelector('header');
 
-  if(window.scrollY > 50){
-    header.classList.add('scrolled');
-  } else {
-    header.classList.remove('scrolled');
-  }
-});
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
 </script>
+
 </body>
 </html>
