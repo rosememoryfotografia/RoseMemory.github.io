@@ -366,6 +366,156 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+/* =====================
+   MEJORAS MÓVIL PREMIUM
+===================== */
+
+body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* TELÉFONOS */
+@media (max-width: 768px) {
+
+  header {
+    padding: 14px 18px;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 14px;
+  }
+
+  nav a {
+    margin: 0;
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+
+  header.scrolled {
+    padding: 10px 18px;
+  }
+
+  .hero {
+    min-height: 100svh;
+    padding: 150px 22px 60px;
+    background-position: center top;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .bienvenido {
+    font-size: clamp(54px, 18vw, 76px);
+    line-height: 0.95;
+    margin-bottom: 5px;
+  }
+
+  .descripcion {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+  }
+
+  .hero-title {
+    font-size: clamp(58px, 20vw, 86px);
+    line-height: 0.9;
+    margin-bottom: 20px;
+  }
+
+  .boton-pdf {
+    position: static;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 48px;
+    padding: 14px 22px;
+    font-size: 13px;
+    border-radius: 14px;
+    width: fit-content;
+  }
+
+  section {
+    padding: 70px 22px;
+  }
+
+  section h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  section p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .card {
+    padding: 14px;
+    border-radius: 20px;
+  }
+
+  .card img {
+    height: 240px;
+    border-radius: 16px;
+  }
+
+  .card p {
+    font-size: 15px;
+    padding: 4px 2px;
+  }
+
+  .card-overlay {
+    opacity: 1;
+    background: linear-gradient(
+      transparent,
+      rgba(0,0,0,0.75)
+    );
+    align-items: flex-end;
+    padding-bottom: 24px;
+  }
+
+  .card-overlay span {
+    font-size: 14px;
+  }
+
+  .acerca-texto p {
+    text-align: left;
+    line-height: 1.9;
+    font-size: 15px;
+    margin-bottom: 22px;
+  }
+
+  .whatsapp-btn {
+    width: 54px;
+    height: 54px;
+    right: 18px;
+    bottom: 18px;
+    font-size: 27px;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 26px 20px;
+  }
+}
 
 </style>
 </head>
@@ -417,7 +567,7 @@ footer {
 
       <a href="comunicacion.html">
 
-        <img src="Creaciones.jpg" alt="Diseño de comunicación visual">
+        <img src="Creaciones.jpg" alt="Diseño de comunicación visual" loading="lazy">
 
         <div class="card-overlay">
           <span>Ver proyecto</span>
@@ -433,7 +583,7 @@ footer {
 
       <a href="fotografia.html">
 
-        <img src="fotografia.jpg" alt="Fotografía profesional">
+        <img src="fotografia.jpg" alt="Fotografía profesional" loading="lazy">
 
         <div class="card-overlay">
           <span>Ver proyecto</span>
@@ -449,7 +599,7 @@ footer {
 
   <a href="multiformato.html">
 
-    <img src="Ilustraciones.jpg" alt="Creación multiformato">
+    <img src="Ilustraciones.jpg" alt="Creación multiformato" loading="lazy">
 
     <div class="card-overlay">
       <span>Ver proyecto</span>
@@ -493,11 +643,12 @@ footer {
 
   <h3>Contacto</h3>
 
-  <p>
+<p>
   Email:
   <a href="mailto:rosememoryfotografia@gmail.com" style="color:white;">
     rosememoryfotografia@gmail.com
   </a>
+</p>
 
   <p>
     Instagram:
