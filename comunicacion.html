@@ -102,7 +102,7 @@ section{
 
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:18px;
 }
 
@@ -139,6 +139,102 @@ section{
   height:300px;
 }
 
+}
+
+/* =====================
+   MEJORAS MÓVIL - COMUNICACIÓN VISUAL
+===================== */
+
+body{
+  overflow-x:hidden;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+.grid a{
+  overflow:hidden;
+  border-radius:16px;
+  display:block;
+}
+
+/* TABLET Y TELÉFONO */
+@media(max-width:768px){
+
+  header{
+    padding:14px 18px;
+  }
+
+  header h1{
+    font-size:25px;
+  }
+
+  .boton-volver{
+    padding:9px 18px;
+    font-size:12px;
+    border-radius:10px;
+  }
+
+  section{
+    padding:115px 18px 60px;
+  }
+
+  .titulo{
+    font-size:clamp(38px, 11vw, 52px);
+    margin-bottom:35px;
+    line-height:1;
+  }
+
+  .descripcion{
+    font-size:15px;
+    line-height:1.8;
+    margin-bottom:35px;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  .grid img{
+    height:320px;
+    border-radius:18px;
+  }
+
+  .grid img:hover{
+    transform:none;
+  }
+}
+
+/* TELÉFONOS PEQUEÑOS */
+@media(max-width:480px){
+
+  header{
+    padding:12px 16px;
+  }
+
+  header h1{
+    font-size:23px;
+  }
+
+  section{
+    padding:105px 16px 50px;
+  }
+
+  .titulo{
+    font-size:40px;
+    margin-bottom:28px;
+  }
+
+  .grid{
+    gap:16px;
+  }
+
+  .grid img{
+    height:280px;
+  }
 }
 
 </style>
